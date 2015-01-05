@@ -1,0 +1,4 @@
+.buildozer
+*.pyc
+bin/
+kivy/
