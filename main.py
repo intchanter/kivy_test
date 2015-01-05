@@ -1,21 +1,11 @@
 from kivy.app import App
-
-from kivy.uix.scatter import Scatter
-from kivy.uix.label import Label
-from kivy.uix.floatlayout import FloatLayout
 from kivy.lang import Builder
 
-app_definition = '''
-FloatLayout:
-    Scatter:
-        Label:
-            text: 'Hey, Jeff!'
-            font_size: 150
-'''
+kivy_filename = 'main.kv'
 
-class TutorialApp(App):
+class NumberNabberApp(App):
     def build(self):
-        return Builder.load_string(app_definition)
+        return Builder.load_file(kivy_filename)
 
 if __name__ == '__main__':
-    TutorialApp().run()
+    NumberNabberApp().run()
