@@ -1,0 +1,54 @@
+#: import press ttt.press
+#: import new_game ttt.new_game
+<Square@Button>:
+    font_size: (self.width + self.height) / 3.0
+    background_color: 0.25, 0, 0.25, 1
+    text: ''
+
+BoxLayout:
+    orientation: 'vertical'
+    Label:
+        id: title
+        size_hint_y: None
+        height: root.height / 10.0
+        text: 'Tic Tac Toe'
+    GridLayout:
+        id: board
+        cols: 3
+        Square:
+            on_press: press(self, root)
+            square: 0
+        Square:
+            on_press: press(self, root)
+            square: 1
+        Square:
+            on_press: press(self, root)
+            square: 2
+        Square:
+            on_press: press(self, root)
+            square: 3
+        Square:
+            on_press: press(self, root)
+            square: 4
+        Square:
+            on_press: press(self, root)
+            square: 5
+        Square:
+            on_press: press(self, root)
+            square: 6
+        Square:
+            on_press: press(self, root)
+            square: 7
+        Square:
+            on_press: press(self, root)
+            square: 8
+    BoxLayout:
+        id: bottom
+        size_hint_y: None
+        height: root.height / 10.0
+        Label:
+            id: status
+            text: 'Turn: X'
+        Button:
+            text: 'New game'
+            on_press: new_game(self, root)
